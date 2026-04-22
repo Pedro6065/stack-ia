@@ -120,3 +120,33 @@ Estudiante de IFCT0210 (Auxiliar Técnico Informático)
 
 ---
 *Generado con ayuda de Claude (Anthropic) · Abril 2026*
+
+## ☁️ Modo híbrido: OpenRouter (modelos en la nube)
+
+Además de Ollama local, el stack soporta **OpenRouter** para acceder a modelos potentes en la nube con respuesta instantánea.
+
+### Configuración
+
+1. Crear cuenta en [openrouter.ai](https://openrouter.ai)
+2. Crear una API Key en [openrouter.ai/keys](https://openrouter.ai/keys)
+3. En Open WebUI: Admin → Settings → Connections → API OpenAI
+4. Añadir conexión con URL `https://openrouter.ai/api/v1` y tu API Key
+5. Desactivar la conexión de `api.openai.com` si no la usas
+
+### Modelos gratuitos recomendados
+
+| Modelo | Velocidad | Uso recomendado |
+|---|---|---|
+| `meta-llama/llama-3-8b-instruct:free` | Muy rápido | Chat general |
+| `google/gemma-2-9b-it:free` | Muy rápido | Razonamiento |
+| `mistralai/mistral-7b-instruct:free` | Muy rápido | Técnico |
+
+### Cuándo usar cada opción
+
+| Situación | Usar |
+|---|---|
+| Sin internet | Ollama (llama3.2:3b) |
+| Datos sensibles / privados | Ollama (llama3.2:3b) |
+| Necesitas velocidad | OpenRouter |
+| Necesitas modelos grandes (70B+) | OpenRouter |
+| Estudio / práctica general | Cualquiera |

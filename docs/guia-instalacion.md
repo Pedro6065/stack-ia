@@ -173,3 +173,27 @@ Solución: Cerrar sesión completa del sistema. Verificar con `groups`.
 ### n8n fetch failed con Ollama
 
 Solución: Usar http://172.17.0.1:11434 en lugar de localhost.
+
+## Paso 8 — OpenRouter (modelos en la nube)
+
+### 8.1 Crear cuenta y API Key
+
+1. Registrarse en https://openrouter.ai
+2. Ir a https://openrouter.ai/keys
+3. Crear una key (nombre: "stack-ia")
+4. Copiar la key inmediatamente
+
+### 8.2 Configurar en Open WebUI
+
+1. Ir a http://localhost:8080/admin/settings/connections
+2. En API OpenAI, pulsar + para añadir conexión
+3. URL: `https://openrouter.ai/api/v1`
+4. API Key: pegar la key de OpenRouter
+5. Desactivar la conexión de `api.openai.com` (toggle off)
+6. Guardar
+
+### 8.3 Verificar
+
+En el chat de Open WebUI, el selector de modelos mostrará cientos de modelos nuevos. Buscar "llama" o "gemma" para probar los gratuitos.
+
+> **Seguridad:** Nunca compartas tu API key. Si la expones accidentalmente, bórrala en OpenRouter y crea una nueva.
