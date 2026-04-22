@@ -1,0 +1,9 @@
+.engram/
+.DS_Store
+Thumbs.db
+.vscode/
+*.swp
+*.swo
+*~
+*.tmp
+*.bak
